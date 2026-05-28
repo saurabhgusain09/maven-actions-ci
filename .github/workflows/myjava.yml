@@ -39,7 +39,7 @@ jobs:
           path: target/*.jar
   deploy:
     needs: build
-    name: Building maven
+    name: Download and display jar file
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
