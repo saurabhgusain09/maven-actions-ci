@@ -56,4 +56,6 @@ jobs:
           path: target
       - name: display jar file
         run: ls -R target
+      - name: display the output file name
+        run: echo echo "Output file name:"${{ needs.build.outputs.artifact-data }}
       
