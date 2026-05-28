@@ -42,13 +42,6 @@ jobs:
     name: Download and display jar file
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
-        uses: actions/checkout@v6
-      - name: setup java
-        uses: actions/setup-java@v5
-        with:
-          distribution: 'temurin'
-          java-version: '17'
       - name: download artifacts
         uses: actions/download-artifact@v8
         with:
