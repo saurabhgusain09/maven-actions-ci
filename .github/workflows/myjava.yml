@@ -37,6 +37,8 @@ jobs:
         with:
           name: myjava-jar
           path: target/*.jar
+      - name: display content of target
+        run: ls -R target
   deploy:
     needs: build
     name: Download and display jar file
