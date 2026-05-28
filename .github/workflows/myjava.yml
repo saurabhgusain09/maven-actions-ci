@@ -37,5 +37,23 @@ jobs:
         with:
           name: myjava-jar
           path: target/*.jar
-        
+  deploy:
+    needs: build
+    name: Building maven
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: setup java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - name: download artifacts
+        uses: actions/download-artifact@v8
+        with:
+          name: myjava-jar
+          path: target/*.jar
+      - name: display jar file
+        run: ls target/
       
