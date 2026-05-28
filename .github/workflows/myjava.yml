@@ -60,7 +60,7 @@ jobs:
         run: find target/*.jar -type f -execdir echo 'artifact_name={}' >> $GITHUB_OUTPUT ';'
   deploy:
     needs: build
-    name: Download and display jar file
+    name: Download & display jar file
     runs-on: ubuntu-latest
     steps:
       - name: get artifacts from build job
