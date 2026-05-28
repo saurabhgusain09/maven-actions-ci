@@ -55,5 +55,5 @@ jobs:
           name: myjava-jar
           path: target/*.jar
       - name: display jar file
-        run: ls target/
+        run: ls -R target/
       
