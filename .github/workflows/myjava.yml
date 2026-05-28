@@ -53,7 +53,7 @@ jobs:
         uses: actions/download-artifact@v8
         with:
           name: myjava-jar
-          path: target/*.jar
+          path: target
       - name: display jar file
         run: ls -R target
       
